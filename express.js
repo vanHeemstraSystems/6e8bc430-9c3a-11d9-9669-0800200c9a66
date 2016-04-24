@@ -1,26 +1,35 @@
-/*
- * Express
- * 
- * param: resource
- */
-var path = require('../../libraries/path');
-var paths = require('../../paths/paths'); 
-// Bluebird has the incredibly useful functionality of enabling you to ‘promisfy’ modules which do not return promises. 
-// For example, to promisfy the fs module, simply require bluebird and a promisified version of fs.
-var Promise = require(path.join(paths.libraries, '/bluebird.js'));
-//var fs = Promise.promisifyAll(require(path.join(paths.libraries, '/fs.js')));
-
-module.exports = function(resource) {
-  console.log('Express - called');
-  var _Express = {};
-  // Create a new Promise
-  return new Promise(function(resolve) {
-	console.log('Express - inside Promise');
-    _Express = {
-      host: "localhost",
-      port: 3000 	
-    }; 
-	console.log('Express - resolve');	
-	resolve(_Express);   
-  });
+function Express() {
+  // add key value pairs here
+  this._host = "localhost";
+  this._port = 3000;
 }
+
+Express.prototype.default = function(fnOrValue) {
+  this._default = fnOrValue;
+  return this;
+}
+
+Express.prototype.host = function() {
+  return this._host;
+}
+
+// DO THE SAME AS ABOVE FUNCTION FOR ALL OTHER INTERNAL PROPERTIES
+
+
+// Dummy functions
+Express.prototype.validate = function() {}
+
+
+Express.prototype.options = function() {}
+
+
+Express.prototype.optional = function() {}
+
+
+Express.prototype.required = function() {}
+
+
+Express.prototype.allowNull = function() {}
+
+
+module.exports = Express;

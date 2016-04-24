@@ -1,67 +1,67 @@
 /*
  * index.js
  */
-var 6e8Applications = require(__dirname+'/applications.js');
-var 6e8Common = require(__dirname+'/common.js');
-var 6e8Databases = require(__dirname+'/databases.js');
-var 6e8Express = require(__dirname+'/express.js');
-var 6e8Rethinkdb = require(__dirname+'/rethinkdb.js');
-var 6e8Servers = require(__dirname+'/servers.js');
+var MeApplications = require(__dirname+'/applications.js');
+var MeCommon = require(__dirname+'/common.js');
+var MeDatabases = require(__dirname+'/databases.js');
+var MeExpress = require(__dirname+'/express.js');
+var MeRethinkdb = require(__dirname+'/rethinkdb.js');
+var MeServers = require(__dirname+'/servers.js');
 
 /**
- * Create a new Proxy that let users create sub-proxies.
- * @return {Proxy}
+ * Create a new Me that let users create sub-mes.
+ * @return {Me}
  */
-function Proxy() { }
+function Me() { }
 
 /**
- * Create a new ProxyApplications object.
- * @return {ProxyApplications}
+ * Create a new MeApplications object.
+ * @return {MeApplications}
  */
-Proxy.prototype.applications = function() {
-  return new ProxyApplications();
+Me.prototype.applications = function() {
+  return new MeApplications();
 }
 
 /**
- * Create a new ProxyCommon object.
- * @return {ProxyCommon}
+ * Create a new MeCommon object.
+ * @return {MeCommon}
  */
  
-Proxy.prototype.common = function() {
-  return new ProxyCommon();
+Me.prototype.common = function() {
+  return new MeCommon();
 }
 
 /**
- * Create a new ProxyDatabases object.
- * @return {ProxyDatabases}
+ * Create a new MeDatabases object.
+ * @return {MeDatabases}
  */
-Proxy.prototype.databases = function() {
-  return new ProxyDatabases();
+Me.prototype.databases = function() {
+  return new MeDatabases();
 }
 
 /**
- * Create a new ProxyExpress object.
- * @return {ProxyExpress}
+ * Create a new MeExpress object.
+ * @return {MeExpress}
  */
-Proxy.prototype.express = function() {
-  return new ProxyExpress();
+Me.prototype.express = function() {
+  return new MeExpress();
 }
 
 /**
- * Create a new ProxyRethinkdb object.
- * @return {ProxyRethinkdb}
+ * Create a new MeRethinkdb object.
+ * @return {MeRethinkdb}
  */
-Proxy.prototype.rethinkdb = function() {
-  return new ProxyRethinkdb();
+Me.prototype.rethinkdb = function() {
+  return new MeRethinkdb();
 }
 
 /**
- * Create a new ProxyServers object.
- * @return {ProxyServers}
+ * Create a new MeServers object.
+ * @return {MeServers}
  */
-Proxy.prototype.servers = function() {
-  return new ProxyServers();
+Me.prototype.servers = function() {
+  return new MeServers();
 }
 
-//ORIGINAL module.exports = new Proxy();
-module.exports = function() { return new Proxy(); }
+//ORIGINAL module.exports = new Me();
+module.exports = function() { return new Me(); }

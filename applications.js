@@ -1,25 +1,37 @@
-/*
- * Applications
- * 
- * param: resource
- */
-var path = require('../../libraries/path');
-var paths = require('../../paths/paths'); 
-// Bluebird has the incredibly useful functionality of enabling you to ‘promisfy’ modules which do not return promises. 
-// For example, to promisfy the fs module, simply require bluebird and a promisified version of fs.
-var Promise = require(path.join(paths.libraries, '/bluebird.js'));
-//var fs = Promise.promisifyAll(require(path.join(paths.libraries, '/fs.js')));
-
-module.exports = function(resource) {
-  console.log('Applications - called');
-  var _Applications = {};
-  // Create a new Promise
-  return new Promise(function(resolve) {
-	console.log('Applications - inside Promise');
-    _Applications = {
-      // add key value pairs here  	
-    };
-	console.log('Applications - resolve');	
-	resolve(_Applications);   
-  });
+function Applications() {
+  // add key value pairs here
+  this._foo = bar;
+  this._default = undefined;
+  this._validator = undefined;
+  this._options = {};
 }
+
+Applications.prototype.default = function(fnOrValue) {
+  this._default = fnOrValue;
+  return this;
+}
+
+Applications.prototype.foo = function() {
+  return this._foo;
+}
+
+// DO THE SAME AS ABOVE FUNCTION FOR ALL OTHER INTERNAL PROPERTIES
+
+
+// Dummy functions
+Applications.prototype.validate = function() {}
+
+
+Applications.prototype.options = function() {}
+
+
+Applications.prototype.optional = function() {}
+
+
+Applications.prototype.required = function() {}
+
+
+Applications.prototype.allowNull = function() {}
+
+
+module.exports = Applications;
