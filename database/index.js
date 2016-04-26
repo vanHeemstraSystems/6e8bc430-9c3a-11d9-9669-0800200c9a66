@@ -17,5 +17,4 @@ Server.prototype.rethinkdb = function() {
   return new DatabaseRethinkdb();
 }
 
-//ORIGINAL module.exports = new Database();
-module.exports = new Database(); // WAS function() { return new Database(); }
+module.exports = new Database();

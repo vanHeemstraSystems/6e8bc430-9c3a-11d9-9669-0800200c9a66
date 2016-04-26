@@ -49,4 +49,4 @@ Rethinkdb.prototype.required = function() {}
 Rethinkdb.prototype.allowNull = function() {}
 
 
-module.exports = Rethinkdb;
+module.exports = new Rethinkdb();
