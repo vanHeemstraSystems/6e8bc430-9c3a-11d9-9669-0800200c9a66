@@ -10,7 +10,7 @@ function Applications() {
 }
 
 Applications.prototype.foo = function() {
-  return _foo;
+  return this._foo;
 }
 
 Applications.prototype.default = function(fnOrValue) {

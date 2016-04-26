@@ -13,19 +13,19 @@ function Rethinkdb() {
 }
 
 Rethinkdb.prototype.host = function() {
-  return _host;
+  return this._host;
 }
 
 Rethinkdb.prototype.port = function() {
-  return _port;
+  return this._port;
 }
 
 Rethinkdb.prototype.authKey = function() {
-  return _authKey;
+  return this._authKey;
 }
 
 Rethinkdb.prototype.db = function() {
-  return _db;
+  return this._db;
 }
 
 Rethinkdb.prototype.default = function(fnOrValue) {

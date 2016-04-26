@@ -46,87 +46,87 @@ function Common() {
 }
 
 Common.prototype.host = function() {
-  return _host;
+  return this._host;
 }
 
 Common.prototype.server_port = function() {
-  return _server_port;
+  return this._server_port;
 }
 
 Common.prototype.server_prefix = function() {
-  return _server_prefix;
+  return this._server_prefix;
 }
 
 Common.prototype.app_port = function() {
-  return _app_port;
+  return this._app_port;
 }
 
 Common.prototype.app_gid = function() {
-  return _app_gid;
+  return this._app_gid;
 }
 
 Common.prototype.app_uid = function() {
-  return _app_uid;
+  return this._app_uid;
 }
 
 Common.prototype.app_list = function() {
-  return _app_list;
+  return this._app_list;
 }
 
 Common.prototype.action_list = function() {
-  return _action_list;
+  return this._action_list;
 }
 
 Common.prototype.model_list = function() {
-  return _model_list;
+  return this._model_list;
 }
 
 Common.prototype.format_list = function() {
-  return _format_list;
+  return this._format_list;
 }
 
 Common.prototype.user_list = function() {
-  return _user_list;
+  return this._user_list;
 }
 
 Common.prototype.allow_cross_domain = function() {
-  return _allow_cross_domain;
+  return this._allow_cross_domain;
 }
 
 Common.prototype.allowedHosts = function() {
-  return _allowedHosts;
+  return this._allowedHosts;
 }
 
 Common.prototype.access_control_allow_origin = function() {
-  return _access_control_allow_origin;
+  return this._access_control_allow_origin;
 }
 
 Common.prototype.lang = function() {
-  return _lang;
+  return this._lang;
 }
 
 Common.prototype.title = function() {
-  return _title;
+  return this._title;
 }
 
 Common.prototype.description = function() {
-  return _description;
+  return this._description;
 }
 
 Common.prototype.keywords = function() {
-  return _keywords;
+  return this._keywords;
 }
 
 Common.prototype.author = function() {
-  return _author;
+  return this._author;
 }
 
 Common.prototype.css_file_location = function() {
-  return _css_file_location;
+  return this._css_file_location;
 }
 
 Common.prototype.web_root = function() {
-  return _web_root;
+  return this._web_root;
 }
 
 Common.prototype.default = function(fnOrValue) {

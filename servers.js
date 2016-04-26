@@ -10,7 +10,7 @@ function Servers() {
 }
 
 Servers.prototype.express = function() {
-  return _express;
+  return this._express;
 }
 
 Servers.prototype.default = function(fnOrValue) {

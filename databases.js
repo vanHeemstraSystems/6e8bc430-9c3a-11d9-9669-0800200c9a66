@@ -10,7 +10,7 @@ function Databases() {
 }
 
 Databases.prototype.rethinkdb = function() {
-  return _rethinkdb;
+  return this._rethinkdb;
 }
 
 Databases.prototype.default = function(fnOrValue) {

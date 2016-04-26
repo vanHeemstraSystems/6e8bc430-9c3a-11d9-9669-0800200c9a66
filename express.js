@@ -11,11 +11,11 @@ function Express() {
 }
 
 Express.prototype.host = function() {
-  return _host;
+  return this._host;
 }
 
 Express.prototype.port = function() {
-  return _port;
+  return this._port;
 }
 
 Express.prototype.default = function(fnOrValue) {
