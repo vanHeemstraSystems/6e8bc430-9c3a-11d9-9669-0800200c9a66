@@ -15,10 +15,6 @@ function Databases() {
   this._options = {};
 }
 
-//Databases.prototype.rethinkdb = function() {
-//  return this._rethinkdb;
-//}
-
 Databases.prototype.database = function() {
   return new DatabasesDatabase;
 }

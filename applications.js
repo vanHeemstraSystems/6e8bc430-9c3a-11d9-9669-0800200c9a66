@@ -1,3 +1,8 @@
+/*
+ * applications.js
+ */
+var ApplicationsApplication = require(__dirname+'/application.js');
+
 function Applications() {
   // add key value pairs here
   // var's are not directly publicly accessible, only through their public method(s)
@@ -11,6 +16,10 @@ function Applications() {
 
 Applications.prototype.foo = function() {
   return this._foo;
+}
+
+Applications.prototype.application = function() {
+  return new ApplicationsApplication;
 }
 
 Applications.prototype.default = function(fnOrValue) {
