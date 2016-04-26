@@ -14,7 +14,7 @@ function Database() { }
  * @return {DatabaseRethinkdb}
  */
 Server.prototype.rethinkdb = function() {
-  return new DatabaseRethinkdb();
+  return new DatabaseRethinkdb;
 }
 
-module.exports = new Database();
+module.exports = Database;

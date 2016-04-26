@@ -4,8 +4,6 @@
 var MeApplications = require(__dirname+'/applications.js');
 var MeCommon = require(__dirname+'/common.js');
 var MeDatabases = require(__dirname+'/databases.js');
-// DELETE var MeExpress = require(__dirname+'/express.js');
-// DELETE var MeRethinkdb = require(__dirname+'/rethinkdb.js');
 var MeServers = require(__dirname+'/servers.js');
 
 /**
@@ -21,7 +19,7 @@ function Me() {
  * @return {MeApplications}
  */
 Me.prototype.applications = function() {
-  return new MeApplications();
+  return new MeApplications;
 }
 
 /**
@@ -30,7 +28,7 @@ Me.prototype.applications = function() {
  */
  
 Me.prototype.common = function() {
-  return new MeCommon();
+  return new MeCommon;
 }
 
 /**
@@ -38,32 +36,15 @@ Me.prototype.common = function() {
  * @return {MeDatabases}
  */
 Me.prototype.databases = function() {
-  return new MeDatabases();
+  return new MeDatabases;
 }
-
-/**
- * Create a new MeExpress object.
- * @return {MeExpress}
- */
-//Me.prototype.express = function() {
-//  return new MeExpress();
-//}
-
-/**
- * Create a new MeRethinkdb object.
- * @return {MeRethinkdb}
- */
-//Me.prototype.rethinkdb = function() {
-//  return new MeRethinkdb();
-//}
 
 /**
  * Create a new MeServers object.
  * @return {MeServers}
  */
 Me.prototype.servers = function() {
-  return new MeServers();
+  return new MeServers;
 }
 
-//ORIGINAL module.exports = new Me();
-module.exports = new Me(); // WAS function() { return new Me(); }
+module.exports = Me;

@@ -39,4 +39,4 @@ Express.prototype.required = function() {}
 Express.prototype.allowNull = function() {}
 
 
-module.exports = new Express();
+module.exports = Express;

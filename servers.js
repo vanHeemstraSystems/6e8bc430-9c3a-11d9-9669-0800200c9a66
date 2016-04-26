@@ -1,3 +1,8 @@
+/*
+ * servers.js
+ */
+var ServersServer = require(__dirname+'/server.js');
+
 function Servers() {
   // add key value pairs here
   // var's are not directly publicly accessible, only through their public method(s)
@@ -9,12 +14,8 @@ function Servers() {
   this._options = {};
 }
 
-//Servers.prototype.express = function() {
-//  return require(__dirname+'/express.js'); // return directly
-//}
-
 Servers.prototype.server = function() {
-  return require(__dirname+'/server.js'); // return directly
+  return new ServersServer;
 }
 
 Servers.prototype.default = function(fnOrValue) {
