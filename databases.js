@@ -1,22 +1,22 @@
 function Databases() {
   // add key value pairs here
-  this._rethinkdb = require('./rethinkdb.js');
+  // var's are not directly publicly accessible, only through their public method(s)
+  // use var's here for protection from direct access  
+  var _rethinkdb = require('./rethinkdb.js');
+  // Dummy public variables
   this._default = undefined;
   this._validator = undefined;
   this._options = {};
+}
+
+Databases.prototype.rethinkdb = function() {
+  return _rethinkdb;
 }
 
 Databases.prototype.default = function(fnOrValue) {
   this._default = fnOrValue;
   return this;
 }
-
-Databases.prototype.rethinkdb = function() {
-  return this._rethinkdb;
-}
-
-// DO THE SAME AS ABOVE FUNCTION FOR ALL OTHER INTERNAL PROPERTIES
-
 
 // Dummy functions
 Databases.prototype.validate = function() {}

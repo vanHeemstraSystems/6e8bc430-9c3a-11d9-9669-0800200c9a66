@@ -1,22 +1,22 @@
 function Applications() {
   // add key value pairs here
-  this._foo = bar;
+  // var's are not directly publicly accessible, only through their public method(s)
+  // use var's here for protection from direct access
+  var _foo = 'bar';
+  // Dummy public variables  
   this._default = undefined;
   this._validator = undefined;
   this._options = {};
+}
+
+Applications.prototype.foo = function() {
+  return _foo;
 }
 
 Applications.prototype.default = function(fnOrValue) {
   this._default = fnOrValue;
   return this;
 }
-
-Applications.prototype.foo = function() {
-  return this._foo;
-}
-
-// DO THE SAME AS ABOVE FUNCTION FOR ALL OTHER INTERNAL PROPERTIES
-
 
 // Dummy functions
 Applications.prototype.validate = function() {}

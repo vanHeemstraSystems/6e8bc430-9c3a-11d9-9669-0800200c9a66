@@ -1,20 +1,27 @@
 function Express() {
   // add key value pairs here
-  this._host = "localhost";
-  this._port = 3000;
+  // var's are not directly publicly accessible, only through their public method(s)
+  // use var's here for protection from direct access
+  var _host = "localhost";
+  var _port = 3000;
+  // Dummy public variables
+  this._default = undefined;
+  this._validator = undefined;
+  this._options = {};
+}
+
+Express.prototype.host = function() {
+  return _host;
+}
+
+Express.prototype.port = function() {
+  return _port;
 }
 
 Express.prototype.default = function(fnOrValue) {
   this._default = fnOrValue;
   return this;
 }
-
-Express.prototype.host = function() {
-  return this._host;
-}
-
-// DO THE SAME AS ABOVE FUNCTION FOR ALL OTHER INTERNAL PROPERTIES
-
 
 // Dummy functions
 Express.prototype.validate = function() {}

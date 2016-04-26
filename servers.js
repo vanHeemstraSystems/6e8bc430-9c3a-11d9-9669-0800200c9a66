@@ -1,22 +1,22 @@
 function Servers() {
   // add key value pairs here
-  this._express = require('./express.js');
+  // var's are not directly publicly accessible, only through their public method(s)
+  // use var's here for protection from direct access
+  var _express = require('./express.js');
+  // Dummy public variables
   this._default = undefined;
   this._validator = undefined;
   this._options = {};
+}
+
+Servers.prototype.express = function() {
+  return _express;
 }
 
 Servers.prototype.default = function(fnOrValue) {
   this._default = fnOrValue;
   return this;
 }
-
-Servers.prototype.rethinkdb = function() {
-  return this._rethinkdb;
-}
-
-// DO THE SAME AS ABOVE FUNCTION FOR ALL OTHER INTERNAL PROPERTIES
-
 
 // Dummy functions
 Servers.prototype.validate = function() {}
