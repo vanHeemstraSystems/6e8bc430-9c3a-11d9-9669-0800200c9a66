@@ -1,3 +1,6 @@
+/*
+ * rethinkdb.js
+ */
 function Rethinkdb() {
   // add key value pairs here
   // var's are not directly publicly accessible, only through their public method(s)

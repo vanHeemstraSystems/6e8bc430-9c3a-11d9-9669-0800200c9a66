@@ -1,3 +1,8 @@
+/*
+ * databases.js
+ */
+var DatabasesDatabase = require(__dirname+'/database.js');
+
 function Databases() {
   // add key value pairs here
   // var's are not directly publicly accessible, only through their public method(s)
@@ -15,7 +20,7 @@ function Databases() {
 //}
 
 Databases.prototype.database = function() {
-  return require(__dirname+'/database.js'); // return directly
+  return new DatabasesDatabase;
 }
 
 Databases.prototype.default = function(fnOrValue) {
