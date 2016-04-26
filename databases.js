@@ -2,7 +2,7 @@ function Databases() {
   // add key value pairs here
   // var's are not directly publicly accessible, only through their public method(s)
   // use var's here for protection from direct access  
-  var _rethinkdb = require('./rethinkdb.js');
+  var _rethinkdb = require(__dirname+'/rethinkdb.js');
   // Dummy public variables
   this._default = undefined;
   this._validator = undefined;
