@@ -13,7 +13,7 @@ function Application() { }
  * Create a new ApplicationSample object.
  * @return {ApplicationSample}
  */
-Server.prototype.sample = function() {
+Application.prototype.sample = function() {
   return new ApplicationSample;
 }
 

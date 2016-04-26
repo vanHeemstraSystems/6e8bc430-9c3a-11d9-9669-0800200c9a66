@@ -13,7 +13,7 @@ function Database() { }
  * Create a new DatabaseRethinkdb object.
  * @return {DatabaseRethinkdb}
  */
-Server.prototype.rethinkdb = function() {
+Database.prototype.rethinkdb = function() {
   return new DatabaseRethinkdb;
 }
 
