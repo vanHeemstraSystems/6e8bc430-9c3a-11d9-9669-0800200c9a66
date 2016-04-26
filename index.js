@@ -66,4 +66,4 @@ Me.prototype.servers = function() {
 }
 
 //ORIGINAL module.exports = new Me();
-module.exports = function() { return new Me(); }
+module.exports = new Me(); // WAS function() { return new Me(); }

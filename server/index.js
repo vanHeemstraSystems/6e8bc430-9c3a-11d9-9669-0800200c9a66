@@ -18,4 +18,4 @@ Server.prototype.express = function() {
 }
 
 //ORIGINAL module.exports = new Server();
-module.exports = new Server; // WAS function() { return new Server(); }
+module.exports = new Server(); // WAS function() { return new Server(); }
