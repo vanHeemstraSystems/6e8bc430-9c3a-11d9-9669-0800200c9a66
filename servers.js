@@ -2,7 +2,7 @@ function Servers() {
   // add key value pairs here
   // var's are not directly publicly accessible, only through their public method(s)
   // use var's here for protection from direct access
-  var _express = require(__dirname+'/express.js');
+  var _foo = 'bar';
   // Dummy public variables
   this._default = undefined;
   this._validator = undefined;
@@ -10,7 +10,7 @@ function Servers() {
 }
 
 Servers.prototype.express = function() {
-  return this._express;
+  return require(__dirname+'/express.js'); // return directly
 }
 
 Servers.prototype.default = function(fnOrValue) {
