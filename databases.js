@@ -1,16 +1,21 @@
 function Databases() {
   // add key value pairs here
   // var's are not directly publicly accessible, only through their public method(s)
-  // use var's here for protection from direct access  
-  var _rethinkdb = require(__dirname+'/rethinkdb.js');
+  // use var's here for protection from direct access 
+  var _foo = 'bar'; 
+  //var _rethinkdb = require(__dirname+'/rethinkdb.js'); // MOVED
   // Dummy public variables
   this._default = undefined;
   this._validator = undefined;
   this._options = {};
 }
 
-Databases.prototype.rethinkdb = function() {
-  return this._rethinkdb;
+//Databases.prototype.rethinkdb = function() {
+//  return this._rethinkdb;
+//}
+
+Databases.prototype.database = function() {
+  return require(__dirname+'/database.js'); // return directly
 }
 
 Databases.prototype.default = function(fnOrValue) {

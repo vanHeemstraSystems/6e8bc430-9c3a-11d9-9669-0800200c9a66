@@ -2,8 +2,8 @@ function Express() {
   // add key value pairs here
   // var's are not directly publicly accessible, only through their public method(s)
   // use var's here for protection from direct access
-  var _host = "localhost";
-  var _port = 3000;
+  this._host = "localhost";
+  this._port = 3000;
   // Dummy public variables
   this._default = undefined;
   this._validator = undefined;
@@ -39,4 +39,4 @@ Express.prototype.required = function() {}
 Express.prototype.allowNull = function() {}
 
 
-module.exports = Express;
+module.exports = new Express;
