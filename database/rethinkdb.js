@@ -1,39 +1,41 @@
 /*
  * rethinkdb.js
  */
+var self = this; // set the context locally, for access protection
+
 function Rethinkdb() {
   // add key value pairs here
-  // var's are not directly publicly accessible, only through their public method(s)
-  // use var's here for protection from direct access
-  var _host = "localhost";
-  var _port = 28015;
-  var _authKey = "";
-  var _db = "test";
+  // self's are not directly publicly accessible, only through their public method(s)
+  // use self's here for protection from direct access
+  self._host = "localhost";
+  self._port = 28015;
+  self._authKey = "";
+  self._db = "test";
   // Dummy public variables  
-  this._default = undefined;
-  this._validator = undefined;
-  this._options = {};
+  self._default = undefined;
+  self._validator = undefined;
+  self._options = {};
 }
 
 Rethinkdb.prototype.host = function() {
-  return this._host;
+  return self._host;
 }
 
 Rethinkdb.prototype.port = function() {
-  return this._port;
+  return self._port;
 }
 
 Rethinkdb.prototype.authKey = function() {
-  return this._authKey;
+  return self._authKey;
 }
 
 Rethinkdb.prototype.db = function() {
-  return this._db;
+  return self._db;
 }
 
 Rethinkdb.prototype.default = function(fnOrValue) {
-  this._default = fnOrValue;
-  return this;
+  self._default = fnOrValue;
+  return self;
 }
 
 // Dummy functions
