@@ -11,6 +11,7 @@ function Rethinkdb() {
   self._port = 28015;
   self._authKey = "";
   self._db = "test";
+  self._rethinkdbdash = {}; // will be set by server, before passing on to mapping
   // Dummy public variables  
   self._default = undefined;
   self._validator = undefined;
@@ -31,6 +32,14 @@ Rethinkdb.prototype.authKey = function() {
 
 Rethinkdb.prototype.db = function() {
   return self._db;
+}
+
+Rethinkdb.prototype.rethinkdbdash = function() {
+  return self._rethinkdbdash;
+}
+
+Rethinkdb.prototype.setrethinkdbdash = function(fnOrValue) {
+  self._rethinkdbdash = fnOrValue;
 }
 
 Rethinkdb.prototype.default = function(fnOrValue) {
