@@ -11,7 +11,7 @@ function Rethinkdb() {
   self._port = 28015;
   self._authKey = "";
   self._db = "test";
-  self._rethinkdbdash = {}; // will be set by server, before passing on to mapping
+  self._rethinkdb = {}; // will be set by server, before passing on to mapping  
   self._type = {};  // will be set by server, before passing on to mapping
   self._schema = {};   // will be set by server, before passing on to mapping
   self._utility = {};  // will be set by server, before passing on to mapping
@@ -39,12 +39,12 @@ Rethinkdb.prototype.db = function() {
   return self._db;
 }
 
-Rethinkdb.prototype.rethinkdbdash = function() {
-  return self._rethinkdbdash;
+Rethinkdb.prototype.rethinkdb = function() {
+  return self._rethinkdb;
 }
 
-Rethinkdb.prototype.setrethinkdbdash = function(fnOrValue) {
-  self._rethinkdbdash = fnOrValue;
+Rethinkdb.prototype.setrethinkdb = function(fnOrValue) {
+  self._rethinkdb = fnOrValue;
 }
 
 Rethinkdb.prototype.type = function() {
