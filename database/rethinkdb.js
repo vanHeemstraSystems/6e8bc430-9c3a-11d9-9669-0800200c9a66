@@ -17,6 +17,7 @@ function Rethinkdb() {
   self._utility = {};  // will be set by server, before passing on to mapping
   self._error = {};  // will be set by server, before passing on to mapping
   self._event = {};  // will be set by server, before passing on to mapping
+  self._query = {};  // will be set by server, before passing on to mapping
   // Dummy public variables  
   self._default = undefined;
   self._validator = undefined;
@@ -85,6 +86,14 @@ Rethinkdb.prototype.event = function() {
 
 Rethinkdb.prototype.setevent = function(fnOrValue) {
   self._event = fnOrValue;
+}
+
+Rethinkdb.prototype.query = function() {
+  return self._query;
+}
+
+Rethinkdb.prototype.setquery = function(fnOrValue) {
+  self._query = fnOrValue;
 }
 
 Rethinkdb.prototype.default = function(fnOrValue) {
